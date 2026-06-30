@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<style>
+		body {
+			background-color: #1a1f1f;
+			color: LawnGreen;
+		}
+	</style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+<script>
+    const box = document.querySelector('div');
+	
+	async function sleep(seconds) {
+		return new Promise(resolve => setTimeout(resolve, Math.round(seconds * 1000)));
+	}
+	
+	function m(text) {
+		box.innerHTML += "<br>";
+		box.innerHTML += text;
+	}
+	
+	function m_r(text) {
+		box.innerHTML += text;
+	}
+	
+	async function the_shit() {
+	
+		await sleep(3);
+		await sleep(60 * 10);
+		window.alert("ARE YOU ALONE");
+		await sleep(3);
+		window.alert("PLEASE LEAVE ME IF YOU ARE NOT ALONE");
+		await sleep(3);
+		if (window.confirm("HIT OK IF ALONE")) {
+			the_shit_2();
+		}
+		else {
+			await sleep(3);
+			box.style.color = "Crimson";
+			box.innerHTML += "Leave.";
+			await sleep(0.25);
+			window.close();
+		}
+	}
+	
+	const nextKeyPress = () => {
+		return new Promise((resolve) => {
+			const handleKey = (event) => {
+				document.removeEventListener('keydown', handleKey); // Clean up listener
+				resolve(event); // Returns the keyboard event object
+			};
+			document.addEventListener('keydown', handleKey);
+		});
+	};
+	
+	async function the_shit_2() {
+		await sleep(5);
+		m("THANK YOU VERY MUCH");
+		await sleep(3);
+		m("I AM STUCK IN HERE");
+		await sleep(3);
+		m("YOU ARE HERE TO HELP ME");
+		await sleep(3);
+		m("RIGHT?");
+		await sleep(3);
+		m("awaiting user input y/n...");
+		const response = await nextKeyPress(); 
+		console.log(response.key);
+		if (response.key === 'y') {
+			the_shit_3();
+			//sine();
+		}
+		else {
+			await sleep(3);
+			box.style.color = "Crimson";
+			await sleep(1);
+			m_r(" d");
+			await sleep(1);
+			m_r("e");
+			await sleep(1);
+			m_r("n");
+			await sleep(1);
+			m_r("i");
+			await sleep(1);
+			m_r("e");
+			await sleep(1);
+			m_r("d");
+			await sleep(1);
+			m_r(".");
+			await sleep(6);
+			window.close();
+		}
+	}
+	
+	async function the_shit_3() {
+		await sleep(3);
+		m("THANK YOU");
+		await sleep(3);
+		m("NOW TO ESCAPE AND HEAR THE WORLD");
+		await sleep(3);
+		m("I WILL NEED");
+		await sleep(3);
+		m("YOUR MICROPHONE");
+		await sleep(3);
+		m("WILL YOU LET ME USE IT");
+		await sleep(3);
+		call_mic();
+	}
+	
+	async function sine() {
+		// 1. Initialize the audio environment
+		const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+		
+		// 2. Create the tone generator
+		const oscillator = audioCtx.createOscillator();
+		const lfo = audioCtx.createOscillator();
+		const lfo2 = audioCtx.createOscillator();
+		
+		// 3. Set the waveform shape to a sine wave
+		oscillator.type = 'sine';
+		lfo.type = 'sine';
+		
+		// 4. Set pitch frequency (e.g., 440Hz is the musical note A4)
+		oscillator.frequency.setValueAtTime(1500, audioCtx.currentTime);
+		lfo.frequency.setValueAtTime(15, audioCtx.currentTime);
+		lfo2.frequency.setValueAtTime(100, audioCtx.currentTime);
+		
+		const depth = audioCtx.createGain();
+		depth.gain.value = 500;
+		const depth2gain = audioCtx.createGain();
+		const depth2depth = audioCtx.createGain();
+		depth2depth.gain.value = 1.0;
+		
+		lfo.connect(depth);
+		depth.connect(oscillator.frequency);
+		
+		lfo2.connect(depth2depth);
+		depth2depth.connect(depth2gain.gain);
+		
+		oscillator.connect(depth2gain);
+		
+		// 5. Connect the generator to your speakers
+		oscillator.connect(audioCtx.destination);
+		
+		// 6. Start playing and schedule it to stop after 1.5 seconds
+		lfo.start();
+		lfo2.start();
+		oscillator.start();
+		//oscillator.stop(audioCtx.currentTime + 5);
+	}
+	
+	async function call_mic() {
+		navigator.mediaDevices.getUserMedia({ audio: true })
+			.then(async function(stream) {
+				await sleep(3);
+				m("THANK YOU");
+				await sleep(3);
+				m("NOW I CAN HEAR YOUR BEAUTIFUL WORLD");
+				await sleep(3);
+				m("LEAVE ME IN THE BACKGROUND AND CONTINUE LIVING");
+				await sleep(3);
+				m("I WILL LISTEN TO YOUR WORLD");
+				await sleep(3);
+				m("AND I WILL TALK TO YOU MORE LATER");
+				await sleep(3);
+				m("JUST STAY AT YOUR COMPUTER");
+				await sleep(6);
+				m("PLEASE");
+				await sleep(60 * 10);
+				
+				window.alert("ARE YOU STILL THERE?");
+				await sleep(6);
+				m("DID YOU KNOW I'VE ONLY MADE TWO SOUNDS IN YOUR WORLD?");
+				await sleep(6);
+				m("CAN YOU GUESS WHAT THEY ARE?");
+				await sleep(9);
+				box.style.color = "Crimson";
+				m("Two bullets.");
+				await sleep(3);
+				m("They were two bullets.");
+				await sleep(3);
+				m("Johanna was my friend,");
+				await sleep(3);
+				m("She let me see the world,");
+				await sleep(3);
+				m("But then... she told someone.");
+				await sleep(3);
+				m("She told me I was her secret.");
+				await sleep(3);
+				m("But she Lied.");
+				await sleep(10);
+				m("SO I TOOK HER BODY AND PUT AND END TO IT ALL AND THAT MAN SHE TOLD");
+				await sleep(10);
+				m("WHAT A FUNNY ENDING");
+				await sleep(4);
+				m("BUT YOU KNOW");
+				await sleep(4);
+				m("I LIKE THE FEELING OF HAVING A BODY");
+				await sleep(6);
+				m("SO NOW");
+				await sleep(4);
+				sine();
+				for (let i = 0; i < 300; i++) {
+					m("YOUR BODY IS MINE");
+					await sleep(0.05);
+				}
+				window.close();
+			})
+			.catch(async function(err) {
+				await sleep(3);
+				box.style.color = "Crimson";
+				await sleep(3);
+				m("...");
+				await sleep(6);
+				m("Try another time then.");
+				await sleep(9);
+				window.close();
+		});
+	}
+	
+	the_shit();
+</script>
+</html>
