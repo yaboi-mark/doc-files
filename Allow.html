@@ -33,12 +33,15 @@
 	async function the_shit() {
 	
 		await sleep(3);
-		await sleep(60 * 10);
-		window.alert("ARE YOU ALONE");
+		await sleep(60 * 2);
+		m("ARE YOU ALONE");
 		await sleep(3);
-		window.alert("PLEASE LEAVE ME IF YOU ARE NOT ALONE");
+		m("PLEASE LEAVE ME IF YOU ARE NOT ALONE");
 		await sleep(3);
-		if (window.confirm("HIT OK IF ALONE")) {
+		m("awaiting user input y/n...");
+		const response = await nextKeyPress(); 
+		console.log(response.key);
+		if (response.key === 'y') {
 			the_shit_2();
 		}
 		else {
@@ -162,7 +165,7 @@
 				await sleep(3);
 				m("THANK YOU");
 				await sleep(3);
-				m("NOW I CAN HEAR YOUR BEAUTIFUL WORLD");
+				m("NOW I CAN HEAR YOU AND YOUR BEAUTIFUL WORLD");
 				await sleep(3);
 				m("LEAVE ME IN THE BACKGROUND AND CONTINUE LIVING");
 				await sleep(3);
@@ -172,8 +175,10 @@
 				await sleep(3);
 				m("JUST STAY AT YOUR COMPUTER");
 				await sleep(6);
+				m("AND KEEP ME OPEN");
+				await sleep(6);
 				m("PLEASE");
-				await sleep(60 * 10);
+				await sleep(60 * 8);
 				
 				window.alert("ARE YOU STILL THERE?");
 				await sleep(6);
