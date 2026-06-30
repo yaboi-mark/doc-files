@@ -132,7 +132,7 @@
 		
 		// 4. Set pitch frequency (e.g., 440Hz is the musical note A4)
 		oscillator.frequency.setValueAtTime(1500, audioCtx.currentTime);
-		lfo.frequency.setValueAtTime(15, audioCtx.currentTime);
+		lfo.frequency.setValueAtTime(20, audioCtx.currentTime);
 		lfo2.frequency.setValueAtTime(100, audioCtx.currentTime);
 		
 		const depth = audioCtx.createGain();
@@ -212,9 +212,9 @@
 				m("SO NOW");
 				await sleep(4);
 				sine();
-				for (let i = 0; i < 300; i++) {
+				for (let i = 0; i < 200; i++) {
 					m("YOUR BODY IS MINE");
-					await sleep(0.05);
+					await sleep(0.01);
 				}
 				window.close();
 			})
