@@ -9,9 +9,9 @@ body {
     display: flex;
     justify-content: center; /* Aligns horizontally */
     text-align: left;
-    width: 70vw;
     min-height: 100vh;
-    padding-left: 15vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     align-content: center;
     filter: drop-shadow(0 0 30px) drop-shadow(0 0 5px);
     animation: flicker 60s linear infinite;
