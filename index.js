@@ -13,6 +13,7 @@ const speed_lookup = {
     " ": 1.5,
     "-": 3,
     ",": 5,
+    ":": 6,
     ".": 7,
     "!": 7,
     "?": 7,
@@ -112,7 +113,7 @@ async function main() {
             }
             else {
                 speed_temp = speed_temp / (1 + speed);
-                speed += 0.01;
+                speed += 0.03;
             }
             body.innerHTML = current_text;
             await sleep(speed_temp);

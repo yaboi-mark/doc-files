@@ -8,9 +8,11 @@ body {
 	font-family: 'JetBrains Mono';
     display: flex;
     justify-content: center; /* Aligns horizontally */
-    align-items: center;     /* Aligns vertically */
+    text-align: left;
     width: 70vw;
+    min-height: 100vh;
     padding-left: 15vw;
+    margin-bottom: 80px;
     align-content: center;
     filter: drop-shadow(0 0 30px) drop-shadow(0 0 5px);
     animation: flicker 60s linear infinite;
