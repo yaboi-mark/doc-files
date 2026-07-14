@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+	background-image: linear-gradient(180deg, black, rgb(0, 214, 252, 0.05));
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+	color: rgb(0, 214, 252);
+	font-family: 'JetBrains Mono';
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center;     /* Aligns vertically */
+    width: 70vw;
+    padding-left: 15vw;
+    align-content: center;
+    filter: drop-shadow(0 0 30px) drop-shadow(0 0 5px);
+    animation: flicker 60s linear infinite;
+}
+
+.positive {
+    color: rgb(155, 255, 130);
+}
+
+.normal {
+    color: rgb(0, 214, 252);
+}
+
+.negative {
+    color: rgb(255, 130, 146);
+}
+
+a {
+	color: rgb(255, 255, 255);
+}
+
+details {
+    margin-left: 20px;
+}
+
+.click_dropdown_content {
+    margin-left: 20px;
+}
+
+@keyframes flicker {
+    0%, 1%, 1.1%, 10%, 10.1%, 22%, 22.05%, 22.1%, 22.2%, 25%, 30%, 32%, 33%, 43%, 43.1%, 72%, 72.5%, 73%, 73.5% {
+	    color: rgb(0, 214, 252);
+    }
+    1.001%, 1.099%, 10.001%, 10.099%, 22.001%, 22.0499%, 22.101%, 22.199%, 29.999%, 32.001%, 32.999%, 43.001%, 43.099%, 72.001%, 72.499%, 73.001%, 73.499% {
+	    color: rgb(0, 171, 202);
+    }
+}
