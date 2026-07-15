@@ -41,6 +41,12 @@ details {
     margin-left: 20px;
 }
 
+.square {
+    padding: 20px;
+    background-color: rgba(40,40,40,0.2);
+    color: rgba(255,255,255,1)
+}
+
 .click_dropdown_content {
     margin-left: 20px;
 }

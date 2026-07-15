@@ -7,8 +7,8 @@ var in_special = false;
 let isPressed = false;
 var speed = 0;
 
-const global_speed = 0.06
-const random_offset_speed = 0.03
+const global_speed = 0.03
+const random_offset_speed = 0.015
 const speed_lookup = {
     " ": 1.5,
     "-": 3,
@@ -25,7 +25,7 @@ var has_started_sine = false;
 window.addEventListener('mousedown', () => {
     isPressed = true;
     if (!has_started_sine) {
-        sine();
+        //sine();
         has_started_sine = true;
     }
 });
