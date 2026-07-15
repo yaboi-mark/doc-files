@@ -7,8 +7,8 @@ var in_special = false;
 let isPressed = false;
 var speed = 0;
 
-const global_speed = 0.03
-const random_offset_speed = 0.015
+const global_speed = 0.04
+const random_offset_speed = 0.01
 const speed_lookup = {
     " ": 1.5,
     "-": 3,

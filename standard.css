@@ -41,6 +41,11 @@ details {
     margin-left: 20px;
 }
 
+.footnote {
+    font-size: 10px;
+    font-style: italic;
+}
+
 .square {
     padding: 20px;
     background-color: rgba(40,40,40,0.2);
