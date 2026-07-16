@@ -115,7 +115,7 @@ async function main() {
                 speed_temp = speed_temp / (1 + speed);
                 speed += 0.03;
             }
-            body.innerHTML = current_text + "<br><br><br><br><br><br><br><br>";
+            body.innerHTML = current_text + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
             await sleep(speed_temp);
         }
         else if (in_special) {
